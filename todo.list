@@ -1,0 +1,10 @@
+implement a compression loss algo before sending image to anthropic. (display message image should be less than 15mo)
+resize image to x or less?
+Aspect ratio	Image size
+1:1	1092x1092 px
+3:4	951x1268 px
+2:3	896x1344 px
+9:16	819x1456 px
+1:2	784x1568 px
+
+If your image does not need to be resized, you can estimate the number of tokens used through this algorithm: tokens = (width px * height px)/750  (200x200 px(0.04 megapixels)	~54	~$0.00016	~$0.16) (1092x1092 px(1.19 megapixels)	~1590	~$0.0048	~$4.80)
